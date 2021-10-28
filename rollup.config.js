@@ -3,8 +3,6 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
-import livereload from "rollup-plugin-livereload";
-import { terser } from "rollup-plugin-terser";
 
 export default {
   input: "src/index.js",
@@ -28,9 +26,5 @@ export default {
       "process.env.NODE_ENV": JSON.stringify("production"),
       preventAssignment: true,
     }),
-    livereload({
-      watch: "src",
-    }),
-    terser(),
   ],
 };
