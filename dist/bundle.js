@@ -21341,7 +21341,7 @@ var breakpoints$1 = breakpoints;/**
  *
  * type Colors = DefaultChakraTheme["colors"]
  */
-var colors = {
+var colors$1 = {
   transparent: "transparent",
   current: "currentColor",
   black: "#000000",
@@ -21563,7 +21563,7 @@ var colors = {
     900: "#003F5E"
   }
 };
-var colors$1 = colors;var radii = {
+var colors$2 = colors$1;var radii = {
   none: "0",
   sm: "0.125rem",
   base: "0.25rem",
@@ -21682,7 +21682,7 @@ var foundations = _extends$9({
   zIndices: zIndices$1,
   radii: radii$1,
   blur: blur$1,
-  colors: colors$1
+  colors: colors$2
 }, typography$1, {
   sizes: sizes$m,
   shadows: shadows$1,
@@ -32366,10 +32366,23 @@ var TabPanels = /*#__PURE__*/forwardRef((props, ref) => {
     className: cx("chakra-tabs__tab-panels", props.className),
     __css: styles.tabpanels
   }));
+});const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false
+};
+const colors = {
+  vecipe: {
+    green: "9cb450",
+    yellow: "febb32"
+  }
+};
+const theme = extendTheme({
+  config,
+  colors
 });const allTags = new Map([["利用シーン", new Map([["合コン", 102], ["パーティー", 103], ["友達/知人と", 104], ["恋人と", 101], ["学生と", 109], ["家族/子供と", 100], ["外国の方と", 106], ["ビジネスパートナーと", 107], ["たくさん食べる方と", 163], ["お店の方と", 105]])], ["店舗基本情報", new Map([["デリバリー", 96], ["テイクアウト", 95], ["貸切", 89], ["全席禁煙", 94], ["感染対策Lev7~", 88], ["全肯定", 99]])], ["料理", new Map([["カロリー表示", 73], ["食べ放題", 74], ["飲み放題", 75], ["コース料理", 76], ["朝食", 77]])], ["入店範囲・店舗施設", new Map([["子ども連れ", 72], ["ペット同伴", 83], ["車いす入店", 84], ["駐車場", 69], ["無料Wi-Fi", 71], ["コンセント", 70]])], ["お酒", new Map([["日本酒", 78], ["焼酎", 79], ["ワイン", 80], ["カクテル", 81], ["お酒こだわり", 111]])], ["座席", new Map([["カウンター席", 85], ["ソファー席", 86], ["座敷", 87], ["個室", 97], ["カップルシート", 98]])]]);
 const categories = [...allTags.keys()];
 
-const App = () => {
+const TagsBox = () => {
   return /*#__PURE__*/React.createElement(Tabs, null, /*#__PURE__*/React.createElement(TabList, null, categories.map(category => /*#__PURE__*/React.createElement(Tab, null, category))), /*#__PURE__*/React.createElement(TabPanels, null, categories.map(category => {
     const tags = allTags.get(category);
     const tagNames = [...tags.keys()];
@@ -32378,14 +32391,8 @@ const App = () => {
       name: "filter_tag[]"
     }, tagName))));
   })));
-};const config = {
-  initialColorMode: "light",
-  useSystemColorMode: false
-};
-const theme = extendTheme({
-  config
-});const element = document.getElementsByClassName("archive_filter_tag")[0];
+};const element = document.getElementsByClassName("archive_filter_tag")[0];
 element.innerHTML = "";
 ReactDOM.render( /*#__PURE__*/React.createElement(ChakraProvider, {
   theme: theme
-}, /*#__PURE__*/React.createElement(App, null)), element);
+}, /*#__PURE__*/React.createElement(TagsBox, null)), element);

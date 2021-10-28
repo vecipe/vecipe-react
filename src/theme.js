@@ -4,6 +4,12 @@ const config = {
   initialColorMode: "light",
   useSystemColorMode: false,
 };
-const theme = extendTheme({ config });
+const colors = {
+  vecipe: {
+    green: "9cb450",
+    yellow: "febb32",
+  },
+};
+const theme = extendTheme({ config, colors });
 
 export default theme;

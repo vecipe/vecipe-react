@@ -3,6 +3,8 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { Checkbox } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/layout";
 
+//import "./style.css";
+
 const allTags = new Map([
   [
     "利用シーン",
@@ -74,7 +76,7 @@ const allTags = new Map([
 ]);
 const categories = [...allTags.keys()];
 
-const App = () => {
+const TagsBox = () => {
   return (
     <Tabs>
       <TabList>
@@ -90,7 +92,9 @@ const App = () => {
             <TabPanel>
               <Stack>
                 {tagNames.map((tagName) => (
-                  <Checkbox value={tags.get(tagName)} name="filter_tag[]">{tagName}</Checkbox>
+                  <Checkbox value={tags.get(tagName)} name="filter_tag[]">
+                    {tagName}
+                  </Checkbox>
                 ))}
               </Stack>
             </TabPanel>
@@ -101,4 +105,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TagsBox;

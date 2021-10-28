@@ -1,13 +1,13 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
+import styles from "rollup-plugin-styles";
 
 export default {
   input: "src/index.js",
   output: {
-    file: "src/bundle.js",
+    file: "dist/bundle.js",
     format: "esm",
     compact: true,
   },
@@ -18,13 +18,10 @@ export default {
       presets: ["@babel/preset-react"],
     }),
     commonjs(),
-    serve({
-      open: true,
-      contentBase: "src",
-    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),
       preventAssignment: true,
     }),
+    //styles(),
   ],
 };
