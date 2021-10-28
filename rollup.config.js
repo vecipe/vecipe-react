@@ -7,7 +7,7 @@ import replace from "@rollup/plugin-replace";
 export default {
   input: "src/index.js",
   output: {
-    file: "src/bundle.js",
+    file: "dist/bundle.js",
     format: "esm",
     compact: true,
   },
@@ -19,8 +19,7 @@ export default {
     }),
     commonjs(),
     serve({
-      open: true,
-      contentBase: "src",
+      contentBase: "dist",
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),

@@ -74,7 +74,7 @@ const allTags = new Map([
 ]);
 const categories = [...allTags.keys()];
 
-const App = () => {
+const TagsBox = () => {
   return (
     <Tabs>
       <TabList>
@@ -101,4 +101,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TagsBox;
