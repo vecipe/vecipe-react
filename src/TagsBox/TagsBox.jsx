@@ -78,10 +78,18 @@ const categories = [...allTags.keys()];
 
 const TagsBox = () => {
   return (
-    <Tabs>
+    <Tabs colorScheme="vecipe.green" variant="soft-rounded">
       <TabList>
         {categories.map((category) => (
-          <Tab>{category}</Tab>
+          <Tab
+            sx={{
+              _focus: {
+                boxShadow: "base",
+              },
+            }}
+          >
+            {category}
+          </Tab>
         ))}
       </TabList>
       <TabPanels>
@@ -92,7 +100,16 @@ const TagsBox = () => {
             <TabPanel>
               <Stack>
                 {tagNames.map((tagName) => (
-                  <Checkbox value={tags.get(tagName)} name="filter_tag[]">
+                  <Checkbox
+                    value={tags.get(tagName)}
+                    name="filter_tag[]"
+                    colorScheme="vecipe.orange"
+                    sx={{
+                      ".chakra-checkbox__control": {
+                        borderColor: "vecipe.green.500",
+                      },
+                    }}
+                  >
                     {tagName}
                   </Checkbox>
                 ))}

@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/provider";
+import TagsBox from "./TagsBox/TagsBox.jsx";
 import theme from "./theme.js";
 //import "./global.css";
 
