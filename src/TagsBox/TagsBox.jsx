@@ -79,7 +79,15 @@ const TagsBox = () => {
     <Tabs colorScheme="vecipe.green" variant="soft-rounded">
       <TabList>
         {categories.map((category) => (
-          <Tab>{category}</Tab>
+          <Tab
+            sx={{
+              _focus: {
+                boxShadow: "base",
+              },
+            }}
+          >
+            {category}
+          </Tab>
         ))}
       </TabList>
       <TabPanels>
