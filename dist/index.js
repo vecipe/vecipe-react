@@ -27807,17 +27807,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
     }
     if (options.count !== void 0 && options.count !== null) {
       var totalColors = options.count;
-      var colors2 = [];
+      var colors3 = [];
       options.count = void 0;
-      while (totalColors > colors2.length) {
+      while (totalColors > colors3.length) {
         options.count = null;
         if (options.seed) {
           options.seed += 1;
         }
-        colors2.push(random(options));
+        colors3.push(random(options));
       }
       options.count = totalColors;
-      return colors2;
+      return colors3;
     }
     var h = pickHue(options.hue, options.seed);
     var s = pickSaturation(h, options);
@@ -32535,11 +32535,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
   function analyse(v) {
     var values = [];
     var numColors = 0;
-    var colors2 = v.match(colorRegex);
-    if (colors2) {
-      numColors = colors2.length;
+    var colors3 = v.match(colorRegex);
+    if (colors3) {
+      numColors = colors3.length;
       v = v.replace(colorRegex, colorToken);
-      values.push.apply(values, colors2.map(color2.parse));
+      values.push.apply(values, colors3.map(color2.parse));
     }
     var numbers = v.match(floatRegex);
     if (numbers) {
@@ -39403,12 +39403,21 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
   ]);
   var categories = [...allTags.keys()];
   var TagsBox = () => {
-    return /* @__PURE__ */ import_react45.default.createElement(Tabs, null, /* @__PURE__ */ import_react45.default.createElement(TabList, null, categories.map((category) => /* @__PURE__ */ import_react45.default.createElement(Tab, null, category))), /* @__PURE__ */ import_react45.default.createElement(TabPanels, null, categories.map((category) => {
+    return /* @__PURE__ */ import_react45.default.createElement(Tabs, {
+      colorScheme: "vecipe.green",
+      variant: "soft-rounded"
+    }, /* @__PURE__ */ import_react45.default.createElement(TabList, null, categories.map((category) => /* @__PURE__ */ import_react45.default.createElement(Tab, null, category))), /* @__PURE__ */ import_react45.default.createElement(TabPanels, null, categories.map((category) => {
       const tags2 = allTags.get(category);
       const tagNames = [...tags2.keys()];
       return /* @__PURE__ */ import_react45.default.createElement(TabPanel, null, /* @__PURE__ */ import_react45.default.createElement(Stack, null, tagNames.map((tagName) => /* @__PURE__ */ import_react45.default.createElement(Checkbox, {
         value: tags2.get(tagName),
-        name: "filter_tag[]"
+        name: "filter_tag[]",
+        colorScheme: "vecipe.orange",
+        sx: {
+          ".chakra-checkbox__control": {
+            borderColor: "vecipe.green.500"
+          }
+        }
       }, tagName))));
     })));
   };
@@ -39419,7 +39428,35 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
     initialColorMode: "light",
     useSystemColorMode: false
   };
-  var theme2 = extendTheme({ config: config2 });
+  var colors2 = {
+    vecipe: {
+      orange: {
+        50: "#FFF7E6",
+        100: "#FFE7B8",
+        200: "#FED88A",
+        300: "#FEC95D",
+        400: "#FEBA2F",
+        500: "#FEAB01",
+        600: "#CB8901",
+        700: "#986601",
+        800: "#664400",
+        900: "#332200"
+      },
+      green: {
+        50: "#F5F7ED",
+        100: "#E3EACD",
+        200: "#D1DCAD",
+        300: "#BECE8D",
+        400: "#ACC06D",
+        500: "#9AB34C",
+        600: "#7B8F3D",
+        700: "#5C6B2E",
+        800: "#3E471F",
+        900: "#1F240F"
+      }
+    }
+  };
+  var theme2 = extendTheme({ config: config2, colors: colors2 });
   var theme_default = theme2;
 
   // src/index.js
