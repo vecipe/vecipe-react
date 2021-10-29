@@ -3,4 +3,5 @@ require("esbuild").build({
   bundle: true,
   loader: { ".js": "jsx" },
   outdir: "dist",
+  minify: true,
 });
