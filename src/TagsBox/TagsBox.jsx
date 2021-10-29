@@ -5,7 +5,7 @@ import { Stack } from "@chakra-ui/layout";
 
 const allTags = new Map([
   [
-    "利用シーン",
+    "シーン",
     new Map([
       ["合コン", 102],
       ["パーティー", 103],
@@ -20,7 +20,7 @@ const allTags = new Map([
     ]),
   ],
   [
-    "店舗基本情報",
+    "基本情報",
     new Map([
       ["デリバリー", 96],
       ["テイクアウト", 95],
@@ -41,7 +41,7 @@ const allTags = new Map([
     ]),
   ],
   [
-    "入店範囲・店舗施設",
+    "施設",
     new Map([
       ["子ども連れ", 72],
       ["ペット同伴", 83],
