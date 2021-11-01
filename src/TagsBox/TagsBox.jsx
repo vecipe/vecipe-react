@@ -5,7 +5,7 @@ import { Stack } from "@chakra-ui/layout";
 
 const allTags = new Map([
   [
-    "シーン",
+    "場面",
     new Map([
       ["合コン", 102],
       ["パーティー", 103],
@@ -20,7 +20,7 @@ const allTags = new Map([
     ]),
   ],
   [
-    "基本情報",
+    "詳細",
     new Map([
       ["デリバリー", 96],
       ["テイクアウト", 95],
@@ -82,7 +82,7 @@ const TagsBox = () => {
           <Tab
             sx={{
               _focus: {
-                boxShadow: "base",
+                boxShadow: "xs",
               },
             }}
           >
@@ -105,6 +105,9 @@ const TagsBox = () => {
                     sx={{
                       ".chakra-checkbox__control": {
                         borderColor: "vecipe.green.500",
+                      },
+                      ".chakra-checkbox__control[data-focus]": {
+                        boxShadow: "xs",
                       },
                     }}
                   >
