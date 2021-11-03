@@ -1551,14 +1551,15 @@ p.catchphrase.rich_font{
   text-align:center!important;
 }
 }
+}
 span.linked-by-vecipe-score strong {
-    /* display: block;
-    margin-top: 2%;
-    margin-bottom: -9%; */
-    color: #9cb450;
-    font-size: 16px;
+	/* display: block;
+	margin-top: 2%;
+	margin-bottom: -9%; */
+	color: #9cb450;
+	font-size: 16px;
 }
-}
+
 @media only screen and (max-width:599px){#login_register_header_not_front_page_touch_device_only{
 	position:absolute;
 	top:20%;
