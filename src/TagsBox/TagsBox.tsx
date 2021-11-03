@@ -9,6 +9,26 @@ type AllTags = CategorizedTags[];
 
 const allTags: AllTags = [
   {
+    category: "昼予算",
+    tagMaps: [
+      { tag: "～1000円", value: 197 },
+      { tag: "1000円～2000円", value: 196 },
+      { tag: "2000円～", value: 195 },
+    ],
+  },
+  {
+    category: "夜予算",
+    tagMaps: [
+      { tag: "～1000円", value: 193 },
+      { tag: "1000円～2000円", value: 192 },
+      { tag: "2000円～3000円", value: 191 },
+      { tag: "3000円～4000円", value: 190 },
+      { tag: "4000円～5000円", value: 189 },
+      { tag: "5000円～10000円", value: 188 },
+      { tag: "10000円～", value: 187 },
+    ],
+  },
+  {
     category: "場面",
     tagMaps: [
       { tag: "合コン", value: 102 },
@@ -77,7 +97,7 @@ const allTags: AllTags = [
   },
 ];
 
-const TagsBox = () => {
+const TagsBox = (): JSX.Element => {
   return (
     <Tabs colorScheme="vecipe.green" variant="soft-rounded">
       <TabList>

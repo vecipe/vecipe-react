@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/provider";
 import theme from "./theme.js";
-import TagsBox from "./TagsBox/TagsBox.jsx";
+import TagsBox from "./TagsBox/TagsBox.tsx";
 //import remove from "./removeSocialWidgets/removeSocialWidgets.js";
 
 (() => {
@@ -18,13 +18,13 @@ import TagsBox from "./TagsBox/TagsBox.jsx";
     element
   );
 
-  const budgetSetector = document.querySelector(
-    //"#gmwd_container_1 > div:nth-child(4) > div > div > div:nth-child(1) > div.col-lg-5.col-md-5.col-sm-12.col-xs-12 > div"
-    "#budgets"
-  );
-  budgetSetector.innerHTML = "";
-  ReactDOM.render(
-    <ChakraProvider theme={theme}></ChakraProvider>,
-    budgetSetector
-  );
+  // const budgetSetector = document.querySelector(
+  //   //"#gmwd_container_1 > div:nth-child(4) > div > div > div:nth-child(1) > div.col-lg-5.col-md-5.col-sm-12.col-xs-12 > div"
+  //   "#budgets"
+  // );
+  // budgetSetector.innerHTML = "";
+  // ReactDOM.render(
+  //   <ChakraProvider theme={theme}></ChakraProvider>,
+  //   budgetSetector
+  // );
 })();
