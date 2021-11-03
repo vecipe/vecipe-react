@@ -247,7 +247,7 @@ ul li ul.gmwd_categories {
 	color:#666666;
 	background-color:#F2F2F2!important;
 }
-#review{
+/* #review{
  padding-top:250px!important;
  margin-top:-250px!important; 
 }
@@ -266,7 +266,7 @@ ul li ul.gmwd_categories {
 #food-info{
  padding-top:280px;
  margin-top:-250px!important;
-}
+} */
 .title_menu{
 	color:#9cb450;
 }
@@ -297,13 +297,13 @@ ul li ul.gmwd_categories {
 .restaurants-concept{
 	color:#666666;
 }
-span.linked-by-vecipe-score strong{
+/* span.linked-by-vecipe-score strong{
 	display:block;
 	margin-top:2%;
 	margin-bottom:-5%;
 	color:#9cb450;
 	font-size:16px;
-}
+} */
 .desc{
 	display:none;
 }
@@ -1439,12 +1439,12 @@ p.catchphrase.rich_font{
 	justify-content:space-evenly;
 }
 }
-@media only screen and (min-width: 600px) and (max-width:1024px){
+/* @media only screen and (min-width: 600px) and (max-width:1024px){
 span.linked-by-vecipe-score strong{
 	margin-top:5%;
 	margin-bottom:-4%!important;
 }
-}
+} */
 @media only screen and (min-width: 600px) and (max-width:1024px){#login_register_header_touch_device_only a{
 	display:inline-block;
 	margin-right:3%;
@@ -1552,9 +1552,9 @@ p.catchphrase.rich_font{
 }
 }
 span.linked-by-vecipe-score strong {
-    display: block;
+    /* display: block;
     margin-top: 2%;
-    margin-bottom: -9%;
+    margin-bottom: -9%; */
     color: #9cb450;
     font-size: 16px;
 }
