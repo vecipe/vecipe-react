@@ -29,7 +29,7 @@ const allTags: AllTags = [
     ],
   },
   {
-    category: "場面",
+    category: "シーン",
     tagMaps: [
       { tag: "合コン", value: 102 },
       { tag: "パーティー", value: 103 },
@@ -100,9 +100,10 @@ const allTags: AllTags = [
 const TagsBox = (): JSX.Element => {
   return (
     <Tabs colorScheme="vecipe.green" variant="soft-rounded">
-      <TabList>
+      <TabList overflowX="scroll">
         {allTags.map((tags) => (
           <Tab
+            flexShrink={0}
             sx={{
               _focus: {
                 boxShadow: "xs",
