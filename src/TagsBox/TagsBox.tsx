@@ -1,7 +1,14 @@
 import React from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import { Checkbox } from "@chakra-ui/react";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Checkbox,
+} from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/layout";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 type TagMap = { tag: string; value: number };
 type CategorizedTags = { category: string; tagMaps: TagMap[] };
@@ -98,6 +105,10 @@ const allTags: AllTags = [
 ];
 
 const TagsBox = (): JSX.Element => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  if (colorMode !== "light") {
+    toggleColorMode();
+  }
   return (
     <Tabs colorScheme="vecipe.green" variant="soft-rounded">
       <TabList overflowX="scroll">
