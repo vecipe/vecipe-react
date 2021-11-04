@@ -382,7 +382,7 @@
   dependencies:
     "@chakra-ui/utils" "^1.7.0"
 
-"@chakra-ui/react@^1.6.12":
+"@chakra-ui/react@^1.6.10":
   version "1.6.12"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-1.6.12.tgz#5225e2ea9fb3426006ccf01d1ac0fccabc3b9753"
   integrity sha512-hlFZPU0ZApEbzdUoUyfr5PCX8UhO4qYmTrZRhWG4noQj/uQu5WkysSHW9k8dtBS2jGIctyY6BQjm7doaQv8Mqg==
@@ -778,7 +778,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react@^17.0.34":
+"@types/react@^17.0.33":
   version "17.0.34"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.34.tgz#797b66d359b692e3f19991b6b07e4b0c706c0102"
   integrity sha512-46FEGrMjc2+8XhHXILr+3+/sTe3OfzSPU9YGKILLrUYbQ1CLQC9Daqo1KzENGXAWwrFwiY0l4ZbF20gRvgpWTg==
@@ -1030,7 +1030,7 @@ focus-lock@^0.8.1:
   dependencies:
     tslib "^1.9.3"
 
-framer-motion@^5.2.0:
+framer-motion@^5.0.2:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-5.2.0.tgz#ac7f486bc48a48a187b28b6152b6db1456365f5a"
   integrity sha512-268cYeh0GNWm26nqicXGuAZOlodvR/huY6KGAP5NuoRhrGnDTv5jgCGt9pZelk6qXsBGPEUMqE6xaYYpTSaHmg==
