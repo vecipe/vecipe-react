@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 type Props = { title: string; formLink: string };
 
@@ -12,20 +13,26 @@ const links: Links = [
   { text: "レビュー", href: "#review" },
 ];
 
-const StickyIntroduce = (props: Props): JSX.Element => (
-  <div>
-    <div>{props.title}</div>
-    <Flex justifyContent="space-around">
-      {links.map((link) => (
+const StickyIntroduce = (props: Props): JSX.Element => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  if (colorMode !== "light") {
+    toggleColorMode();
+  }
+
+  return (
+    <div>
+      <div>{props.title}</div>
+      <Flex justifyContent="space-around">
+        {links.map((link) => (
+          <Box>
+            <a href={link.href}>{link.text}</a>
+          </Box>
+        ))}
         <Box>
-          <a href={link.href}>{link.text}</a>
+          <a href={props.formLink}>口コミ投稿</a>
         </Box>
-      ))}
-      <Box>
-        <a href={props.formLink}>口コミ投稿</a>
-      </Box>
-    </Flex>
-  </div>
-);
+      </Flex>
+    </div>
+  )};
 
 export default StickyIntroduce;
