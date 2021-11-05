@@ -26,8 +26,10 @@ import StickyIntroduce from "./StickyIntroduce/StickyIntroduce.tsx";
     //"#sticky-introduce"
   );
   if (element02) {
-    const title = element02.textContent
-    const formLink = document.querySelector(".rwp-ratings-form-wrap").getAttribute("id")
+    const title = element02.textContent;
+    const formLink = document
+      .querySelector(".rwp-ratings-form-wrap")
+      .getAttribute("id");
     element02.removeAttribute("class");
     ReactDOM.render(
       <ChakraProvider theme={theme}>
