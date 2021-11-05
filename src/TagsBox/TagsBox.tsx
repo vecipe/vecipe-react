@@ -111,7 +111,7 @@ const TagsBox = (): JSX.Element => {
   }
   return (
     <Tabs colorScheme="vecipe.green" variant="soft-rounded">
-      <TabList overflowX="scroll">
+      <TabList overflowX="auto">
         {allTags.map((tags) => (
           <Tab
             flexShrink={0}
