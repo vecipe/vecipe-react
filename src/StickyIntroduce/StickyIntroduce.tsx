@@ -1,6 +1,5 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 
 type Props = { title: string; formLink: string };
@@ -20,19 +19,16 @@ const StickyIntroduce = (props: Props): JSX.Element => {
   }
 
   return (
-    <div>
+    <div className="introduce_shoulder_copy">
       <div>{props.title}</div>
       <Flex justifyContent="space-around">
         {links.map((link) => (
-          <Box>
-            <a href={link.href}>{link.text}</a>
-          </Box>
+          <a href={link.href}>{link.text}</a>
         ))}
-        <Box>
-          <a href={props.formLink}>口コミ投稿</a>
-        </Box>
+        <a href={`#${props.formLink}`}>口コミ投稿</a>
       </Flex>
     </div>
-  )};
+  );
+};
 
 export default StickyIntroduce;
