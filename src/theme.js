@@ -32,6 +32,10 @@ const colors = {
     },
   },
 };
-const theme = extendTheme({ config, colors });
+const theme = extendTheme({
+  config,
+  colors,
+  styles: { global: { img: { display: "unset" } } },
+});
 
 export default theme;
