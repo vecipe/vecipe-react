@@ -11,7 +11,7 @@ p.um-notice.success{
 	background:#9cb450;
 }
 .is-style-outline{
-    word-break: keep-all;
+    /* word-break: keep-all; */
 	  display:inline-block;
 }
 .single-news .login_register_header_not_front_page{
@@ -911,6 +911,9 @@ p.restaurant-info{
 }
 .rwp-review-wrap.rwp-theme-2 .rwp-scores .rwp-str .rwp-s{
 	background-size:show;
+}
+.wp-block-button {
+	line-height: 1;
 }
 .wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{
 	box-shadow:0.2px 3px #666666;
