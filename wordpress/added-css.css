@@ -700,7 +700,7 @@ div.um-modal .upload:hover{
 }
 .wp-block-button__link{
 	padding:4.4px;
-  width:140px;
+  /* width:140px; */
 }
 .wp-block-button__link:hover{
 	opacity:0.8;
