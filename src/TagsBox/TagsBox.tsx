@@ -51,6 +51,13 @@ const allTags: AllTags = [
     ],
   },
   {
+    category: "投稿",
+    tagMaps: [
+      { tag: "ユーザー", value: 213 },
+      { tag: "店舗公式", value: 214 },
+    ],
+  },
+  {
     category: "詳細",
     tagMaps: [
       { tag: "デリバリー", value: 96 },
