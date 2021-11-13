@@ -35,7 +35,7 @@ const colors = {
 const theme = extendTheme({
   config,
   colors,
-  styles: { global: { img: { display: "unset" } } },
+  styles: { global: { img: { display: "unset", maxWidth: "unset" } } },
 });
 
 export default theme;
