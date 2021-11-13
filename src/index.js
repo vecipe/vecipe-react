@@ -3,6 +3,7 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/provider";
 import theme from "./theme.js";
 import TagsBox from "./TagsBox/TagsBox.tsx";
+import WalkTimeSelector from "./WalkTimeSelector/WalkTimeSelector.tsx";
 // import StickyIntroduce from "./StickyIntroduce/StickyIntroduce.tsx";
 //import remove from "./removeSocialWidgets/removeSocialWidgets.js";
 
@@ -18,6 +19,22 @@ import TagsBox from "./TagsBox/TagsBox.tsx";
         <TagsBox></TagsBox>
       </ChakraProvider>,
       element
+    );
+  }
+
+  const selectorContainer = document.querySelector(
+    "#gmwd_container_1 > div:nth-child(4) > div > div > div:nth-child(1) > div.col-lg-7.col-md-7.col-sm-12.col-xs-12 > div:nth-child(2) > div:nth-child(2)"
+  );
+  if (selectorContainer) {
+    document.querySelector(
+      "#gmwd_container_1 > div:nth-child(4) > div > div > div:nth-child(1) > div.col-lg-7.col-md-7.col-sm-12.col-xs-12 > div:nth-child(2) > div:nth-child(1) > label"
+    ).textContent = "徒歩";
+    selectorContainer.innerHTML = "";
+    ReactDOM.render(
+      <ChakraProvider theme={theme}>
+        <WalkTimeSelector></WalkTimeSelector>
+      </ChakraProvider>,
+      selectorContainer
     );
   }
 

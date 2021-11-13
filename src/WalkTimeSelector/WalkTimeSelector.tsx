@@ -11,7 +11,6 @@ const distances = walkTimes.map((time) => time * humanSpeed);
 const WalkTimeSelector = (): JSX.Element => (
   <Select
     placeholder="時間"
-    className="gmwd_store_locator_radius1"
     id="gmwd_store_locator_radius1"
   >
     {walkTimes.map((time, i) => (
