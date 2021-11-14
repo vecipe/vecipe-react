@@ -12,6 +12,11 @@ const WalkTimeSelector = (): JSX.Element => (
   <Select
     placeholder="時間"
     id="gmwd_store_locator_radius1"
+    sx={{
+      _focus: {
+        boxShadow: "xs",
+      },
+    }}
   >
     {walkTimes.map((time, i) => (
       <option value={distances[i]}>{`${time}分`}</option>
