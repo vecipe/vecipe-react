@@ -1,7 +1,27 @@
-.wp-block-button {
+.line_adjust{
+	font-weight:900;
+}
+#footer_nav a{
+	color:#9cb450;
+}
+#index_news ol li a{
+	color:#9cb450;
+}
+#index_news ol li a:hover{
+	color:#febb32;
+}
+.font_food_occation{
+	font-weight:900;
+}
+.font_food_preference{
+	font-weight:900;
+}
+.font_preference{
+	font-weight:900;
+}
+.wp-block-button__link　.wp-block-button {
 	line-height: 1;
 }
-
 #footer_nav a{
 	font-weight:300;
 }
@@ -700,7 +720,6 @@ div.um-modal .upload:hover{
 }
 .wp-block-button__link{
 	padding:4.4px;
-  /* width:140px; */
 }
 .wp-block-button__link:hover{
 	opacity:0.8;
