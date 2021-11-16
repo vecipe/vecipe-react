@@ -7,6 +7,12 @@
 #index_news ol li a{
 	color:#9cb450;
 }
+#index_news_mobile{
+	color:#9cb450;
+}
+#index_news_mobile:hover{
+	color:#febb32;
+}
 #index_news ol li a:hover{
 	color:#febb32;
 }
@@ -237,8 +243,9 @@ ul li ul.gmwd_categories {
 	display:none;
 }
 .attention_please_map{
-	display:block;
-	margin-top:-4%;
+	display:flex;
+	flex-wrap:wrap;
+	/*margin-top:-4%;*/
 	font-size:16px;
 	line-height:1.2;
 }
@@ -1062,7 +1069,7 @@ p.restaurant-info{
 .how_to_discount{margin-top:-71px!important; !important; }
 }
 .post_content p{
-		overflow:hidden;
+		/*overflow:hidden;*/
 	  margin-top:5px!important
 }
 .q_button.rounded.sz_s3:hover{
@@ -1231,12 +1238,13 @@ details.sm:not([open]) summary.ssm::after {
   cursor: pointer;
 	display:block;
 }	
+/*
 @media (min-width:1050px){
 .attention_please_map{
 	display:none;
 	margin-top:-50%;
 	}
-}
+}*/
 .rwp-review-wrap .rwp-review .rwp-users-reviews-wrap .rwp-people-label em a
 @media screen and (max-width:1024px) {
 .header_search_inputs input
@@ -1623,7 +1631,7 @@ span.linked-by-vecipe-score strong {
 }
 @media (max-width:599px){
 .attention_please_map{
-	margin-top:-8%;
+	/*margin-top:-8%;*/
 	white-space:nowrap;
 	}
 }
