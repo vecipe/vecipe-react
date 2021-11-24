@@ -4,6 +4,7 @@ import { ChakraProvider } from "@chakra-ui/provider";
 import theme from "./theme.js";
 import TagsBox from "./TagsBox/TagsBox.tsx";
 import WalkTimeSelector from "./WalkTimeSelector/WalkTimeSelector.tsx";
+import MapDescription from "./MapDescription/MapDescription.tsx";
 // import StickyIntroduce from "./StickyIntroduce/StickyIntroduce.tsx";
 //import remove from "./removeSocialWidgets/removeSocialWidgets.js";
 
@@ -35,6 +36,20 @@ import WalkTimeSelector from "./WalkTimeSelector/WalkTimeSelector.tsx";
         <WalkTimeSelector></WalkTimeSelector>
       </ChakraProvider>,
       selectorContainer
+    );
+  }
+
+  const mapElement = document.querySelector(
+    "#gmwd_container_1 > div:nth-child(5)"
+  );
+  if (mapElement) {
+    const mapDescriptionContainer = document.createElement("div");
+    mapElement.parentElement.insertBefore(mapDescriptionContainer, mapElement);
+    ReactDOM.render(
+      <ChakraProvider theme={theme}>
+        <MapDescription></MapDescription>
+      </ChakraProvider>,
+      mapDescriptionContainer
     );
   }
 
