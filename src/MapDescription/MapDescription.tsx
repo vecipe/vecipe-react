@@ -21,7 +21,10 @@ const MapDescription = (): JSX.Element => {
       <Accordion defaultIndex={0} allowToggle={true}>
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton
+              borderRadius="md"
+              sx={{ _focus: { boxShadow: "xs" } }}
+            >
               <Box>ピンの色：</Box>
               <AccordionIcon></AccordionIcon>
             </AccordionButton>
