@@ -35,7 +35,12 @@ const colors = {
 const theme = extendTheme({
   config,
   colors,
-  styles: { global: { img: { display: "unset", maxWidth: "unset" } } },
+  styles: {
+    global: {
+      img: { display: "unset", maxWidth: "unset" },
+      a: { color: "vecipe.green.500" },
+    },
+  },
 });
 
 export default theme;
