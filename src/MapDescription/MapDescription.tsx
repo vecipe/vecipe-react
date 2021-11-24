@@ -20,7 +20,7 @@ const MapDescription = (): JSX.Element => {
     <Flex wrap={"wrap"}>
       <Accordion defaultIndex={0} allowToggle={true}>
         <AccordionItem>
-          <h2>
+          <h5>
             <AccordionButton
               borderRadius="md"
               sx={{ _focus: { boxShadow: "xs" } }}
@@ -28,7 +28,7 @@ const MapDescription = (): JSX.Element => {
               <Box>ピンの色：</Box>
               <AccordionIcon></AccordionIcon>
             </AccordionButton>
-          </h2>
+          </h5>
           <AccordionPanel>
             <Flex direction="row">
               <Image
