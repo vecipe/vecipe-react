@@ -37,7 +37,12 @@ const MapDescription = (): JSX.Element => {
                 boxSize="32px"
                 fit="contain"
               ></Image>
-              <Box>全ヴィーガン（すべてのメニューがヴィーガン対応）​</Box>
+              <Box>
+                <span style={{ display: "inline-block" }}>全ヴィーガン</span>
+                <span style={{ display: "inline-block" }}>
+                  （すべてのメニューがヴィーガン対応）
+                </span>
+              </Box>
             </Flex>
             <Flex direction="row">
               <Image
@@ -46,7 +51,12 @@ const MapDescription = (): JSX.Element => {
                 boxSize="32px"
                 fit="contain"
               ></Image>
-              <Box>一部ヴィーガン（一部のメニューがヴィーガン対応）​</Box>
+              <Box>
+                <span style={{ display: "inline-block" }}>一部ヴィーガン</span>
+                <span style={{ display: "inline-block" }}>
+                  （一部のメニューがヴィーガン対応）
+                </span>
+              </Box>
             </Flex>
           </AccordionPanel>
         </AccordionItem>
